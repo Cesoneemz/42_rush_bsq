@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_loadfile.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wlanette <wlanette@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: qagda <qagda@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 19:55:48 by wlanette          #+#    #+#             */
-/*   Updated: 2021/09/20 19:55:48 by wlanette         ###   ########.fr       */
+/*   Updated: 2021/09/20 22:39:59 by qagda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,9 @@ int	**ft_parse_map(char *file, t_matrix map)
 		matrix[index] = (int *)malloc(map.strlen * sizeof(int));
 		while (jndex < map.strlen)
 		{
-			if (*file == map_info.empty_sym)
+			if (*file == map.empty_sym)
 				matrix[index][jndex] = 0;
-			if (*file == map_info.obtacle_sym)
+			if (*file == map.obtacle_sym)
 				matrix[index][jndex] = 1;
 			jndex++;
 			file++;

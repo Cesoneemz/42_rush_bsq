@@ -10,7 +10,7 @@
 #                                                                            */
 # ************************************************************************** */
 
-SRCS		= main.c ./srcs/ft_loadfile.c ./srcs/ft_strlen.c
+SRCS		= main.c ./srcs/ft_loadfile.c ./srcs/ft_strlen.c ./srcs/validation.c
 OBJS		= ${SRCS:.c=.o}
 INCS		= includes
 NAME		= bsq

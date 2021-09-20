@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_file_struct.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wlanette <wlanette@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: qagda <qagda@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 20:05:36 by wlanette          #+#    #+#             */
-/*   Updated: 2021/09/20 20:05:36 by wlanette         ###   ########.fr       */
+/*   Updated: 2021/09/20 22:48:24 by qagda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,11 @@ typedef struct s_matrix
 	char	fill_sym;
 
 }			t_matrix;
+
+typedef enum s_bool
+{
+	false = 0,
+	true = 1
+}			t_bool;
 
 #endif
