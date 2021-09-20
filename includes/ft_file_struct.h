@@ -23,5 +23,4 @@ typedef struct s_matrix
 
 }			t_matrix;
 
-
 #endif

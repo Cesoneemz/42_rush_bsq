@@ -13,12 +13,11 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include <stdio.h>
 
 #include "ft_file_struct.h"
 #include "BSQ.h"
 
-# define BUF_SIZE 2048
+#define BUF_SIZE 2048
 
 char	*ft_load_file(char *path)
 {
@@ -50,33 +49,30 @@ t_matrix	ft_get_map_info(char *file)
 	return (map_info);
 }
 
-int			**ft_parse_map(char *file, t_matrix map_info)
+int	**ft_parse_map(char *file, t_matrix map)
 {
 	int		**matrix;
 	int		index;
 	int		jndex;
 
-	matrix = (int **)malloc(map_info.strs_len * map_info.strlen * sizeof(int *));
+	matrix = (int **)malloc(map.strs_len * map.strlen * sizeof(int *));
 	if (matrix == NULL)
 		return (NULL);
-	index = 1;
+	index = 0;
 	file += 5;
-	while (index < map_info.strs_len + 1)
+	while (index < map.strs_len)
 	{
 		jndex = 0;
-		matrix[index] = (int *)malloc(map_info.strlen * sizeof(int));
-		while (jndex < map_info.strlen && *file != '\n')
+		matrix[index] = (int *)malloc(map.strlen * sizeof(int));
+		while (jndex < map.strlen)
 		{
 			if (*file == map_info.empty_sym)
 				matrix[index][jndex] = 0;
 			if (*file == map_info.obtacle_sym)
 				matrix[index][jndex] = 1;
-			printf("%d", matrix[index][jndex]);
 			jndex++;
 			file++;
 		}
-		printf("\n");
-		file++;
 		index++;
 	}
 	return (matrix);

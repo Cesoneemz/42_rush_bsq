@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 
 #include "BSQ.h"
 #include "ft_file_struct.h"
@@ -27,12 +26,7 @@ int main(int argc, char **argv)
 	file = ft_load_file(argv[1]);
 	map_info = ft_get_map_info(file);
 	matrix = ft_parse_map(file, map_info);
-	for (int i = 0; i < map_info.strs_len; i++)
-	{
-		for (int j = 0; i < map_info.strlen; j++)
-		{
-			printf("%d ", matrix[i][j]);
-		}
-		printf("\n");
-	}
+
+	return (0);
 }
+
