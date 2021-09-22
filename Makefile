@@ -10,7 +10,7 @@
 #                                                                            */
 # ************************************************************************** */
 
-SRCS		= main.c ./srcs/ft_loadfile.c ./srcs/ft_strlen.c ./srcs/validation.c
+SRCS		= main.c ./srcs/ft_loadfile.c ./srcs/ft_strlen.c ./srcs/validation.c ./srcs/ft_point_logic.c ./srcs/ft_rect_logic.c ./srcs/ft_rect_list_logic.c ./srcs/ft_soution.c ./srcs/ft_utils.c ./srcs/ft_check_borders.c ./srcs/ft_get_right_rect.c
 OBJS		= ${SRCS:.c=.o}
 INCS		= includes
 NAME		= bsq
